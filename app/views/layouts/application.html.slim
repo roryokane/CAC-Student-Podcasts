@@ -8,4 +8,7 @@ html
     = javascript_include_tag 'application', 'data-turbolinks-track' => true
     = csrf_meta_tags
   body
-    = yield
+    h1#site-name
+      = link_to "CAC Student Podcasts", root_path
+    #main-body
+      = yield
