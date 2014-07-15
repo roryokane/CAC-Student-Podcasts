@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
-  root to: 'pages#about'
+  resources :podcasts
+
   get 'about', to: 'pages#about'
+  root to: 'pages#about'
 end
