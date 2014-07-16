@@ -1,23 +1,16 @@
+- title "Listing podcasts"
 h1 Listing podcasts
 
-table
-  thead
-    tr
-      th Title
-      th Description
-      th
-      th
-      th
+- if @podcasts.any?
+  - @podcasts.each do |podcast|
+    .podcast-info
+      h2 = link_to podcast.title, podcast
+      p = simple_format podcast.description
+      p
+        = link_to 'Edit', edit_podcast_path(podcast)
+        '  |
+        = link_to 'Delete', podcast, data: {:confirm => 'Are you sure?'}, :method => :delete
+- else
+  p There are no podcasts on the site yet.
 
-  tbody
-    - @podcasts.each do |podcast|
-      tr
-        td = podcast.title
-        td = podcast.description
-        td = link_to 'Show', podcast
-        td = link_to 'Edit', edit_podcast_path(podcast)
-        td = link_to 'Destroy', podcast, data: {:confirm => 'Are you sure?'}, :method => :delete
-
-br
-
-= link_to 'New Podcast', new_podcast_path
+= link_to 'New podcast', new_podcast_path

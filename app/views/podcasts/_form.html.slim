@@ -7,9 +7,10 @@
           li = message
 
   .field
-    = f.label :title
+    => f.label :title
     = f.text_field :title
   .field
-    = f.label :description
-    = f.text_area :description
+    => f.label :description
+    div
+      = f.text_area :description
   .actions = f.submit 'Save'
