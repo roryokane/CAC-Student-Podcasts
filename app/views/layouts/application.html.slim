@@ -10,5 +10,7 @@ html
   body
     h1#site-name
       = link_to "CAC Student Podcasts", root_path
+
+    h1 = yield :page_title
     #main-body
       = yield
