@@ -12,5 +12,9 @@ html
       = link_to "CAC Student Podcasts", root_path
 
     h1 = yield :page_title
+
+    - flash.each do |name, msg|
+      = content_tag :div, msg, class: name
+
     #main-body
       = yield
