@@ -2,7 +2,7 @@
 
 FactoryGirl.define do
   factory :podcast do
-    title "MyString"
-    description "MyText"
+    title "All About Newspapers"
+    description "Why newspapers were created, and how to print your own."
   end
 end
