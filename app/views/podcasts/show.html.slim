@@ -7,6 +7,7 @@ p
   strong> Description:
   = simple_format @podcast.description
 
-= link_to 'Edit', edit_podcast_path(@podcast)
-'  |
-= link_to 'Back', podcasts_path
+p.related-links
+  = link_to 'Edit', edit_podcast_path(@podcast)
+  '  |
+  = link_to 'Back', podcasts_path
