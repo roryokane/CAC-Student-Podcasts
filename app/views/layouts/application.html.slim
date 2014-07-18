@@ -11,6 +11,8 @@ html
     h1#site-name
       = link_to "CAC Student Podcasts", root_path
 
+    = render 'layouts/navigation_links'
+
     h1 = yield :page_title
 
     - flash.each do |name, msg|
