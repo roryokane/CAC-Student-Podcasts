@@ -6,11 +6,14 @@ body
   margin: 2em
   font-family: sans-serif
 
+$link-color: #60140f
+
 a
-  color: #60140f
+  color: $link-color
   text-decoration: none
   &:visited
-    font-weight: none
+    // not enabling because it would affect main navigation and New/Edit links too, looking strange
+    //color: darken($link-color, 10%)
   &:hover
     text-decoration: underline
 
