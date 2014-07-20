@@ -1,0 +1,25 @@
+// copied from my personal https://gist.github.com/roryokane/3956743
+
+@mixin all-but-first($property, $normal-value, $value-for-first: 0)
+  #{$property}: $normal-value
+  &:first-child
+    #{$property}: $value-for-first
+
+@mixin all-but-last($property, $normal-value, $value-for-last: 0)
+  // won't work in IE8 or below; :last-child not supported
+  #{$property}: $normal-value
+  &:last-child
+    #{$property}: $value-for-last
+
+
+// remember that an alternative to these in certain cases is $property: $val1 $val2
+@mixin both-vertical($property, $value)
+  #{$property}-top: $value
+  #{$property}-bottom: $value
+@mixin both-horizontal($property, $value)
+  #{$property}-right: $value
+  #{$property}-left: $value
+
+
+@mixin horizontally-centered-using-margins
+  +both-horizontal(margin, auto)
