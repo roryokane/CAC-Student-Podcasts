@@ -13,6 +13,7 @@ gem 'spring', group: :development
 gem 'slim-rails'
 gem 'thin'
 gem 'normalize-rails'
+gem 'devise'
 group :development do
   gem 'better_errors'
   gem 'binding_of_caller', :platforms=>[:mri_21]
