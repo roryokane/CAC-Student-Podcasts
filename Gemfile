@@ -14,6 +14,7 @@ gem 'slim-rails'
 gem 'thin'
 gem 'normalize-rails'
 gem 'devise'
+gem 'pundit'
 group :development do
   gem 'better_errors'
   gem 'binding_of_caller', :platforms=>[:mri_21]
