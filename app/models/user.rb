@@ -10,4 +10,9 @@ class User < ActiveRecord::Base
          :trackable, :validatable
   # The other Devise modules available are:
   # :registerable, :confirmable, :lockable, :timeoutable and :omniauthable
+
+  def email_required?
+    # undo Devise's default requiring of an email
+    false
+  end
 end
